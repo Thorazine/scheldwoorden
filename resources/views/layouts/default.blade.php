@@ -36,6 +36,7 @@
                 <div class="col-sm-4 offset-md-1 py-4">
                   <h4 class="text-white">Pagina's</h4>
                   <ul class="list-unstyled">
+                    <li><a class="text-white" href="{{ URL::route('index') }}" title="Een willekeurig scheldwoord">Scheldwoord van de dag</a></li>
                     <li><a class="text-white" href="{{ URL::route('random') }}" title="Een willekeurig scheldwoord">Willekeurig</a></li>
                     <li><a class="text-white" href="{{ URL::route('array.php') }}" title="Scheldwoorden in een PHP array">Php array</a></li>
                     <li><a class="text-white" href="{{ URL::route('array.json') }}" title="Scheldwoorden in een JSON array">Json array</a></li>
