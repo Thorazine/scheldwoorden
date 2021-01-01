@@ -33,7 +33,7 @@ Alle Nederlandse scheldwoorden op alfabetische volgorde. Dit zijn alle scheldwoo
 
 <div class="container alfabetical">
 	@foreach($words as $word)
-	<a href="{{ URL::route('specific', ['letter' => $letter, 'word' => urlencode($word->word)]) }}" title="Het scheldwoord {{ $word->word }}">{{ ucfirst($word->word) }}</a><br>
+	<a href="{{ URL::route('alfabet', ['letter' => $letter, 'word' => urlencode($word->word)]) }}" title="Het scheldwoord {{ $word->word }}">{{ ucfirst($word->word) }}</a><br>
 	@endforeach
 </div>
 @stop
