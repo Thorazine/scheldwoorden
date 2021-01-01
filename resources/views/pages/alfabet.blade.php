@@ -23,7 +23,7 @@ Alle Nederlandse scheldwoorden op alfabetische volgorde. Dit zijn alle scheldwoo
     <nav>
         <ul class="pagination">
             @foreach($alfabet as $alfa)
-            <li class="page-item"><a class="page-link" href="{{ URL::route('alfabet', ['letter' => $alfa->letter]) }}" title="Scheldwoorden beginnend met {{ $alfa->letter }}">{{ $alfa->letter }}</a></li>
+            <li class="page-item"><a class="page-link" href="{{ URL::route('alfabet', ['letter' => $alfa->letter]) }}" title="Scheldwoorden beginnend met {{ strtolower($alfa->letter) }}">{{ strtolower($alfa->letter) }}</a></li>
             @endforeach
         </ul>
     </nav>
@@ -33,7 +33,7 @@ Alle Nederlandse scheldwoorden op alfabetische volgorde. Dit zijn alle scheldwoo
 
 <div class="container alfabetical">
 	@foreach($words as $word)
-	<a href="{{ URL::route('alfabet', ['letter' => $letter, 'word' => urlencode($word->word)]) }}" title="Het scheldwoord {{ $word->word }}">{{ ucfirst($word->word) }}</a><br>
+	<a href="{{ URL::route('alfabet', ['letter' => $letter, 'word' => urlencode(strtolower($word->word))]) }}" title="Het scheldwoord {{ $word->word }}">{{ ucfirst($word->word) }}</a><br>
 	@endforeach
 </div>
 @stop
